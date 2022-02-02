@@ -9,43 +9,5 @@
         android:id="@+id/travelsFragment"
         android:name="com.travelproject.presentation.travels.TravelsFragment"
         android:label="TravelsFragment"
-        tools:layout="@layout/fragment_travels">
-        <action
-            android:id="@+id/action_travelsFragment_to_travelDetailsMainFragment"
-            app:destination="@id/travelDetailsMainFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/favouriteFragment"
-        android:name="com.travelproject.presentation.favourite.FavouriteFragment"
-        android:label="FavouriteFragment"
-        tools:layout="@layout/fragment_favourite" />
-    <fragment
-        android:id="@+id/addFragment"
-        android:name="com.travelproject.presentation.add_travel.AddFragment"
-        android:label="AddFragment"
-        tools:layout="@layout/fragment_add" />
-    <fragment
-        android:id="@+id/purchasesFragment"
-        android:name="com.travelproject.presentation.purchases.PurchasesFragment"
-        android:label="PurchasesFragment"
-        tools:layout="@layout/fragment_purchases" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.travelproject.presentation.profile.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/travelDetailsMainFragment"
-        android:name="com.travelproject.presentation.travel_details.details_main.DetailsMainFragment"
-        android:label="TravelDetailsMainFragment"
-        tools:layout="@layout/fragment_details_main">
-        <action
-            android:id="@+id/action_travelDetailsMainFragment_to_detailsDaysFragment"
-            app:destination="@id/detailsDaysFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/detailsDaysFragment"
-        android:name="com.travelproject.presentation.travel_details.details_days.DetailsDaysFragment"
-        android:label="DetailsDaysFragment"
-        tools:layout="@layout/fragment_details_days" />
+        tools:layout="@layout/fragment_travels" />
 </navigation>

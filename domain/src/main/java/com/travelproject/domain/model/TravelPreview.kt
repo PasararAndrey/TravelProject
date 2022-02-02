@@ -2,7 +2,7 @@ package com.travelproject.domain.model
 
 data class TravelPreview(
     val id: Int,
-    val title: String,
-    val image: String
-
+    val image: String,
+    val country:String,
+    val daysAmount:Int
 )
