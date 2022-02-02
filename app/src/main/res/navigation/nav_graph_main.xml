@@ -10,4 +10,21 @@
         android:name="com.travelproject.presentation.travels.TravelsFragment"
         android:label="TravelsFragment"
         tools:layout="@layout/fragment_travels" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.travelproject.presentation.favourite.FavouriteFragment"
+        android:label="FavouriteFragment"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/userTravelsFragment"
+        android:name="com.travelproject.presentation.usertravels.UserTravelsFragment"
+        android:label="UserTravelsFragment"
+        tools:layout="@layout/fragment_user_travels" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.travelproject.presentation.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+
 </navigation>
