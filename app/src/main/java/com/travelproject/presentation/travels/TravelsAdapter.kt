@@ -14,11 +14,9 @@ import com.travelproject.domain.model.TravelPreview
 class TravelsAdapter(val travelsListener: TravelsListener) : ListAdapter<TravelPreview, TravelsAdapter.TravelViewHolder>(TravelDiffCallback) {
 
     class TravelViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val daysAmount = itemView.findViewById<TextView>(R.id.days_amount)
         private val country = itemView.findViewById<TextView>(R.id.country)
         private val image = itemView.findViewById<ImageView>(R.id.image)
         fun bind(travelsListener: TravelsListener, travelPreview: TravelPreview) {
-            daysAmount.text = travelPreview.daysAmount.toString()
             country.text = travelPreview.country
 
             this.itemView.rootView.setOnClickListener {
