@@ -2,8 +2,8 @@ package com.travelproject.presentation.travels
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.travelproject.R
 import com.travelproject.databinding.FragmentTravelsBinding
@@ -21,7 +21,8 @@ class TravelsFragment : Fragment(R.layout.fragment_travels) {
         _binding = FragmentTravelsBinding.bind(view)
         val mAdapter = TravelsAdapter(
             TravelsListener { travelId: Int ->
-                Toast.makeText(requireContext(), "${travelId} pressed", Toast.LENGTH_LONG).show()
+                val action = TravelsFragmentDirections.actionTravelsFragmentToTravelGeneralFragment().setTravelId(travelId)
+                findNavController().navigate(action)
             })
 
 

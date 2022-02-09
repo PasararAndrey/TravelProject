@@ -3,13 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main.xml"
-    app:startDestination="@id/travelsFragment">
+    app:startDestination="@id/profileFragment">
 
     <fragment
         android:id="@+id/travelsFragment"
         android:name="com.travelproject.presentation.travels.TravelsFragment"
         android:label="TravelsFragment"
-        tools:layout="@layout/fragment_travels" />
+        tools:layout="@layout/fragment_travels">
+        <action
+            android:id="@+id/action_travelsFragment_to_travelGeneralFragment"
+            app:destination="@id/travelGeneralFragment"
+            />
+    </fragment>
     <fragment
         android:id="@+id/favouriteFragment"
         android:name="com.travelproject.presentation.favourite.FavouriteFragment"
@@ -25,6 +30,17 @@
         android:name="com.travelproject.presentation.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/travelGeneralFragment"
+        android:name="com.travelproject.presentation.travelgeneral.TravelGeneralFragment"
+        android:label="TravelGeneralFragment"
+        tools:layout="@layout/fragment_general_travel">
+        <argument
+            android:name="travelId"
+            android:defaultValue="-1"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
 
 
 </navigation>
