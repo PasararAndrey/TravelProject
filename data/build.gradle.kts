@@ -36,7 +36,11 @@ dependencies {
     // core
     implementation(Libs.stdLib)
     implementation(Libs.coreKtx)
-
+    implementation(Libs.retrofit)
+    implementation(Libs.retrofitGsonConverter)
+    //Dagger and Hilt
+    implementation(Libs.hilt)
+    kapt(Libs.hiltCompiler)
     implementation(project(Modules.domain))
 
 }

@@ -22,6 +22,9 @@ object Versions {
     internal const val annotation = "28.0.0"
     internal const val imageSlider = "1.4.0"
 
+    internal const val retrofit = "2.9.0"
+    internal const val retrofitConverter = "2.5.0"
+
 
     internal const val jUnitVersion = "4.13.2"
     internal const val espressoVersion = "3.4.0"
@@ -113,6 +116,9 @@ object Libs {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
 
+    //Retrofit
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitConverter}"
 
     const val glideRuntime = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"

@@ -1,13 +1,18 @@
 package com.travelproject.data.repository
 
+import com.travelproject.data.remote.TravelApi
+import com.travelproject.data.remote.dto.toTravelPreview
 import com.travelproject.domain.model.TravelPreview
 import com.travelproject.domain.repository.TravelRepository
+import javax.inject.Inject
 
-class TravelRepositoryImpl : TravelRepository {
+class TravelRepositoryImpl @Inject constructor(
+    private val travelApi: TravelApi
+) : TravelRepository {
     override suspend fun getTravelsPreviews(): List<TravelPreview> {
-        return listOf<TravelPreview>(
-            TravelPreview(1, "Title", "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg")
-        )
+        return travelApi.getTravelPreviews().map {
+            it.toTravelPreview()
+        }
     }
 
 }

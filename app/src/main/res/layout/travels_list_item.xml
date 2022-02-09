@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="8dp"
     android:layout_margin="16dp"
+    android:elevation="8dp"
     app:cardCornerRadius="16dp">
 
     <RelativeLayout
@@ -17,18 +17,18 @@
             android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="194dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/phones"
-            android:src="@drawable/phones"
-            />
+            tools:src="@drawable/phones" />
 
         <View
             android:id="@+id/divider"
             style="@style/Divider"
             android:layout_width="match_parent"
-            android:layout_below="@id/main_image"
-            android:layout_marginTop="4dp" />
+            android:layout_below="@id/main_image" />
 
         <TextView
             android:id="@+id/country"

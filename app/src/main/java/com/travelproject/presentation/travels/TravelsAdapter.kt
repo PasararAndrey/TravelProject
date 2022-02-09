@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.travelproject.databinding.TravelsListItemBinding
 import com.travelproject.domain.model.TravelPreview
 
@@ -22,7 +23,13 @@ class TravelsAdapter(private val travelsListener: TravelsListener) : ListAdapter
         }
 
         fun bind(travelPreview: TravelPreview) {
-            binding.country.text = travelPreview.country
+            binding.apply {
+                country.text = travelPreview.country
+                Glide.with(this@TravelViewHolder.itemView.context)
+                    .load(travelPreview.image)
+                    .centerInside()
+                    .into(mainImage)
+            }
         }
     }
 
