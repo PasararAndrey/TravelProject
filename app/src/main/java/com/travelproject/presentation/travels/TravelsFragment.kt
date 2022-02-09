@@ -27,11 +27,14 @@ class TravelsFragment : Fragment(R.layout.fragment_travels) {
                 val action = TravelsFragmentDirections.actionTravelsFragmentToTravelGeneralFragment().setTravelId(travelId)
                 findNavController().navigate(action)
             })
-        travelViewModel.travelsPreview.observe(viewLifecycleOwner,
-            {
+
+        travelViewModel.apply {
+            getTravels()
+            travelsPreview.observe(viewLifecycleOwner,{
                 mAdapter.submitList(it)
             })
-        
+        }
+
         binding.travelsList.apply {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)

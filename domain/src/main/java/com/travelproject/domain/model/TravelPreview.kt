@@ -4,5 +4,4 @@ data class TravelPreview(
     val id: Int,
     val image: String,
     val country:String,
-    val daysAmount:Int
 )

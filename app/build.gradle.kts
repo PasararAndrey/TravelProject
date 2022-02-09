@@ -80,7 +80,7 @@ dependencies {
 
     //Glide
     implementation(Libs.glideRuntime)
-    annotationProcessor(Libs.glideCompiler)
+    kapt(Libs.glideCompiler)
 
     testImplementation(Libs.jUnit)
     androidTestImplementation(Libs.androidJUNit)
@@ -93,7 +93,6 @@ dependencies {
     implementation(project(Modules.data)) {
         exclude("com.travelproject", "data")
     }
-
 
 
 }

@@ -1,45 +1,40 @@
 package com.travelproject.presentation.travels
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.travelproject.R
+import com.travelproject.databinding.TravelsListItemBinding
 import com.travelproject.domain.model.TravelPreview
 
-class TravelsAdapter(val travelsListener: TravelsListener) : ListAdapter<TravelPreview, TravelsAdapter.TravelViewHolder>(TravelDiffCallback) {
+class TravelsAdapter(private val travelsListener: TravelsListener) : ListAdapter<TravelPreview, TravelsAdapter.TravelViewHolder>(TravelDiffCallback) {
 
-    class TravelViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val country = itemView.findViewById<TextView>(R.id.country)
-        private val image = itemView.findViewById<ImageView>(R.id.image)
-        fun bind(travelsListener: TravelsListener, travelPreview: TravelPreview) {
-            country.text = travelPreview.country
-
-            this.itemView.rootView.setOnClickListener {
-                travelsListener.onClick(travelPreview)
+    inner class TravelViewHolder constructor(private val binding: TravelsListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val travel = getItem(position)
+                    travelsListener.onClick(travel)
+                }
             }
         }
 
-        companion object {
-            fun from(viewGroup: ViewGroup): TravelViewHolder {
-                val layoutInflater = LayoutInflater.from(viewGroup.context)
-                val view = layoutInflater.inflate(R.layout.travels_list_item, viewGroup, false)
-                return TravelViewHolder(view)
-            }
+        fun bind(travelPreview: TravelPreview) {
+            binding.country.text = travelPreview.country
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TravelViewHolder {
-        return TravelViewHolder.from(viewGroup = parent)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val view = TravelsListItemBinding.inflate(layoutInflater, parent, false)
+        return TravelViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TravelViewHolder, position: Int) {
-        holder.bind(travelsListener, getItem(position))
+        val currentTravelPreview = getItem(position)
+        holder.bind(currentTravelPreview)
     }
 
 

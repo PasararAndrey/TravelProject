@@ -4,7 +4,7 @@ import com.travelproject.domain.model.TravelPreview
 
 interface TravelRepository {
 
-    fun getTravelsPreviews(): List<TravelPreview>
+    suspend fun getTravelsPreviews(): List<TravelPreview>
 
 
 }

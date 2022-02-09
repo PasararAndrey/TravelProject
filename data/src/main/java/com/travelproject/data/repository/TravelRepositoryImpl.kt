@@ -4,9 +4,9 @@ import com.travelproject.domain.model.TravelPreview
 import com.travelproject.domain.repository.TravelRepository
 
 class TravelRepositoryImpl : TravelRepository {
-    override fun getTravelsPreviews(): List<TravelPreview> {
+    override suspend fun getTravelsPreviews(): List<TravelPreview> {
         return listOf<TravelPreview>(
-            TravelPreview(1, "Title", "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",3)
+            TravelPreview(1, "Title", "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg")
         )
     }
 
