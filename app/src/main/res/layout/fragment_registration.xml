@@ -14,86 +14,96 @@
         android:text="Create Account"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        tools:ignore="HardcodedText,SpUsage" />
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"
+        android:hint="Enter your name"
+        android:theme="@style/TextInputLayoutTheme"
+        tools:ignore="HardcodedText">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
+            android:id="@+id/user_name_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Enter your name"
             android:imeOptions="actionNext"
-            android:inputType="text"
-            android:textSize="22sp"
-            tools:ignore="HardcodedText" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"
+        android:theme="@style/TextInputLayoutTheme">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/email_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:textSize="22sp"
             tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"
+        android:theme="@style/TextInputLayoutTheme">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Password"
             android:imeOptions="actionNext"
             android:inputType="textPassword"
-            android:textSize="22sp"
+            android:textColorHint="@color/white"
             tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"
+        android:theme="@style/TextInputLayoutTheme">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_password_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Re-enter Password"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:textSize="22sp"
             tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/create_account_btn"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -102,4 +112,12 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
+    <ProgressBar
+        android:id="@+id/registration_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        tools:visibility="visible" />
 </LinearLayout>

@@ -30,6 +30,9 @@ object Versions {
     internal const val espressoVersion = "3.4.0"
     internal const val androidJUNitVersion = "1.1.3"
 
+    internal const val datastore = "1.0.0"
+
+    internal const val loggingInterceptor = "4.9.1"
 
 }
 
@@ -41,7 +44,7 @@ object Modules {
 object Android {
     const val compileSdk = 31
     const val applicationId = "com.travelproject"
-    const val minSdk = 21
+    const val minSdk = 23
     const val targetSdk = 31
     const val versionCode = 1
     const val versionName = "1.0"
@@ -120,8 +123,12 @@ object Libs {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitConverter}"
 
+    const val loggingInterceptor =  "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+
     const val glideRuntime = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+    const val datastorePreferences = "androidx.datastore:datastore-preferences:${Versions.datastore}"
 
 
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"

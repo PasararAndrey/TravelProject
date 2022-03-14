@@ -1,4 +1,4 @@
-package com.travelproject.data.remote.dto
+package com.travelproject.data.model.dto
 
 import com.google.gson.annotations.SerializedName
 import com.travelproject.domain.model.TravelPreview

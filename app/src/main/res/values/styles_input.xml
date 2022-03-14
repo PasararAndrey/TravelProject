@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TravelProject.Widget.Auth.TextInputLayout.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box_stroke_color</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="android:textColorHint">@color/white_54</item>
+    </style>
+
+
+    <style name="TextInputLayoutTheme">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="EditTextDefaultStyle" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+</resources>

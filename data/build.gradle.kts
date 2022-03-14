@@ -40,7 +40,10 @@ dependencies {
     implementation(Libs.retrofitGsonConverter)
     //Dagger and Hilt
     implementation(Libs.hilt)
+
+    implementation(Libs.datastorePreferences)
+
     kapt(Libs.hiltCompiler)
     implementation(project(Modules.domain))
-
+    implementation(Libs.loggingInterceptor)
 }

@@ -13,55 +13,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:gravity="center"
+        android:gravity="center_horizontal"
+        android:text="Your Travel"
         android:textColor="@color/white"
         android:textSize="38sp"
-        tools:text="Your Travel" />
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="16dp"
+        android:theme="@style/TextInputLayoutTheme">
 
-        >
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/email_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints="emailAddress"
-            android:background="@android:color/transparent"
             android:hint="Sign with email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:textSize="22sp"
-            tools:ignore="HardcodedText"
-            />
+            tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/TravelProject.Widget.Auth.TextInputLayout.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="16dp"
-        >
+        android:theme="@style/TextInputLayoutTheme">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
+            android:id="@+id/password_edit_text"
+            style="@style/EditTextDefaultStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints="password"
-            android:background="@android:color/transparent"
             android:hint="Enter password"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:textSize="22sp"
-            tools:ignore="HardcodedText"
-            />
+
+            tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/login_btn"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -83,7 +84,7 @@
             tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/btnSignUp"
+            android:id="@+id/sign_up_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -103,6 +104,12 @@
         android:textStyle="normal"
         tools:ignore="HardcodedText" />
 
-
+    <ProgressBar
+        android:id="@+id/login_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible" />
 
 </LinearLayout>

@@ -1,6 +1,6 @@
-package com.travelproject.data.remote
+package com.travelproject.data.remote.api
 
-import com.travelproject.data.remote.dto.TravelPreviewDto
+import com.travelproject.data.model.dto.TravelPreviewDto
 import retrofit2.http.GET
 
 interface TravelApi {

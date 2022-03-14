@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/main_bg">
+
+    <ProgressBar
+        android:id="@+id/profile_progress_bar"
+        android:layout_width="64dp"
+        android:layout_height="64sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="128dp"
+        android:elevation="16dp"
+        android:indeterminateTint="@color/black"
+        android:visibility="invisible"
+
+        tools:visibility="visible" />
 
     <LinearLayout
         android:id="@+id/profile_constraint"
@@ -18,7 +30,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -54,54 +66,15 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/user_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:text="somemail@gmail.com"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Phone Number"
-                    android:textColor="@color/black_60"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="123124411414"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="somemail@gmail.com" />
 
             </LinearLayout>
 
@@ -109,27 +82,19 @@
 
 
         <Button
+            android:id="@+id/logout_btn"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="64dp"
             android:backgroundTint="@android:color/transparent"
             android:elevation="0dp"
-            android:layout_marginTop="64dp"
             android:text="Logout"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_gravity="center"
             tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_image"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/profile_img"
-        app:shapeAppearance="@android:color/transparent"
-        app:shapeAppearanceOverlay="@style/Circular" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

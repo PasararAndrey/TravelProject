@@ -1,7 +1,7 @@
 package com.travelproject.data.repository
 
-import com.travelproject.data.remote.TravelApi
-import com.travelproject.data.remote.dto.toTravelPreview
+import com.travelproject.data.model.dto.toTravelPreview
+import com.travelproject.data.remote.api.TravelApi
 import com.travelproject.domain.model.TravelPreview
 import com.travelproject.domain.repository.TravelRepository
 import javax.inject.Inject

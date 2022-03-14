@@ -82,6 +82,11 @@ dependencies {
     implementation(Libs.glideRuntime)
     kapt(Libs.glideCompiler)
 
+    implementation(Libs.datastorePreferences)
+    implementation(Libs.retrofit)
+    implementation(Libs.retrofitGsonConverter)
+    implementation(Libs.loggingInterceptor)
+
     testImplementation(Libs.jUnit)
     androidTestImplementation(Libs.androidJUNit)
     androidTestImplementation(Libs.espresso)
