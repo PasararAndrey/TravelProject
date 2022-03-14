@@ -1,5 +1,6 @@
 package com.travelproject.data.repository
 
+import android.util.Log
 import com.travelproject.data.remote.api.UserApi
 import com.travelproject.data.util.Response
 import com.travelproject.data.util.SessionManager
@@ -55,6 +56,7 @@ class UserRepositoryImpl @Inject constructor(
 
     override suspend fun logout(): Result<String> {
         return try {
+            Log.d("logout", "logout in repository called")
             sessionManager.logout()
             Result.Success("Logged Out Successfully!")
         } catch (e: Exception) {

@@ -1,6 +1,7 @@
 package com.travelproject.presentation.profile
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -25,12 +26,14 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentProfileBinding.bind(view)
+
+        subscribeToProfileInfoEvents()
+        profileViewModel.getUser()
         binding.logoutBtn.setOnClickListener {
+            Log.d("logout", "logoutBtn pressed")
             profileViewModel.logout()
             findNavControllerById(R.id.fragment_container).navigate(R.id.action_mainFragment_to_loginFragment)
         }
-        subscribeToProfileInfoEvents()
-        profileViewModel.getUser()
     }
 
 

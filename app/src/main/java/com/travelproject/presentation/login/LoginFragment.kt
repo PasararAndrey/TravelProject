@@ -46,7 +46,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             when (result) {
                 is Result.Success -> {
                     hideProgressBar()
-                    Snackbar.make(requireView(), "Logged In!", Snackbar.LENGTH_SHORT).show()
                     val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()
                     findNavController().navigate(action)
                 }

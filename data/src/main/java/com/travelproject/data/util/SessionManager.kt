@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.first
 
 class SessionManager(val context: Context) {
 
+
     private val Context.datastore: DataStore<Preferences> by preferencesDataStore(name = "session_manager")
 
     suspend fun saveJwtToken(token: String) {
@@ -21,17 +22,20 @@ class SessionManager(val context: Context) {
         }
     }
 
+
     suspend fun getJwtToken(): String? {
         val jwtTokenKey = stringPreferencesKey(JWT_TOKEN_KEY)
         val preferences = context.datastore.data.first()
+        Log.d("SessionManager", "preferences[jwtTokenKey] - ${preferences[jwtTokenKey]}")
         return preferences[jwtTokenKey]
     }
 
     suspend fun logout() {
+        Log.d("logout", "logout in session manager started")
         context.datastore.edit { preferences ->
-            Log.d("Logout", preferences.toString())
+            Log.d("logout", "Before logout - ${preferences[stringPreferencesKey(JWT_TOKEN_KEY)]}")
             preferences.clear()
-            Log.d("Logout", preferences.toString())
+            Log.d("logout", "After logout - ${preferences[stringPreferencesKey(JWT_TOKEN_KEY)]}")
         }
     }
 }
