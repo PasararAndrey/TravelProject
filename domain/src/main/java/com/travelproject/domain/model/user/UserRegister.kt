@@ -1,4 +1,4 @@
-package com.travelproject.domain.model
+package com.travelproject.domain.model.user
 
 data class UserRegister(
     val email: String,

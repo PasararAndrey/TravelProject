@@ -12,10 +12,3 @@ data class TravelPreviewDto(
     val country: String
 )
 
-fun TravelPreviewDto.toTravelPreview(): TravelPreview {
-    return TravelPreview(
-        id = travelId,
-        image = image,
-        country = country
-    )
-}

@@ -3,6 +3,7 @@ package com.travelproject.presentation
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.travelproject.R
@@ -19,8 +20,28 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         _binding = FragmentMainBinding.bind(view)
         val bottomNavigationView = binding.bottomNavigation
         val navController = (childFragmentManager.findFragmentById(R.id.main_container_view) as NavHostFragment).navController
+        setupDestinationListener(navController)
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
 
+    }
+
+    private fun setupDestinationListener(navController: NavController) {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.travelGeneralFragment) {
+                hideBottomNavigation()
+            } else {
+                showBottomNavigation()
+            }
+        }
+
+    }
+
+    private fun hideBottomNavigation() {
+        binding.bottomNavigation.visibility = View.GONE
+    }
+
+    private fun showBottomNavigation() {
+        binding.bottomNavigation.visibility = View.VISIBLE
     }
 
     override fun onDestroyView() {

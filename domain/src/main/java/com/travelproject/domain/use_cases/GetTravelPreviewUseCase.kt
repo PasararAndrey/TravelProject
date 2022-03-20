@@ -1,4 +1,4 @@
-    package com.travelproject.domain.use_cases
+package com.travelproject.domain.use_cases
 
 import com.travelproject.domain.model.TravelPreview
 import com.travelproject.domain.repository.TravelRepository

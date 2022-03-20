@@ -19,7 +19,8 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideTravelRepository(travelApi: TravelApi): TravelRepository = TravelRepositoryImpl(travelApi)
+    fun provideTravelRepository(travelApi: TravelApi): TravelRepository =
+        TravelRepositoryImpl(travelApi)
 
     @Provides
     @Singleton

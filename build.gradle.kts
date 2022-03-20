@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
     }
     dependencies {
         classpath(BuildPlugins.kotlinGradle)
@@ -14,6 +15,8 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
+
 
 
 tasks.register("clean", Delete::class) {

@@ -20,7 +20,7 @@ object Versions {
 
     internal const val pluginGradle = "7.0.2"
     internal const val annotation = "28.0.0"
-    internal const val imageSlider = "1.4.0"
+    internal const val imageSlider = "0.1.0"
 
     internal const val retrofit = "2.9.0"
     internal const val retrofitConverter = "2.5.0"
@@ -98,7 +98,7 @@ object Libs {
     const val cardview = "androidx.cardview:cardview:${Versions.cardview}"
     const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
     const val viewPager2 = "androidx.viewpager2:viewpager2:${Versions.viewPager}"
-    const val imageSlider = "com.github.smarteist:autoimageslider:${Versions.imageSlider}"
+    const val imageSlider = "com.github.denzcoskun:ImageSlideshow:0.1.0"
 
 
     //Lifecycle
@@ -123,7 +123,7 @@ object Libs {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitConverter}"
 
-    const val loggingInterceptor =  "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     const val glideRuntime = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"

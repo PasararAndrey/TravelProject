@@ -1,7 +1,7 @@
 package com.travelproject.domain.use_cases.user
 
 import com.travelproject.domain.model.Result
-import com.travelproject.domain.model.UserRegister
+import com.travelproject.domain.model.user.UserRegister
 import com.travelproject.domain.repository.UserRepository
 import javax.inject.Inject
 

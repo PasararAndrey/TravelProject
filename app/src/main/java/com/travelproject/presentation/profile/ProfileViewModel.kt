@@ -3,7 +3,7 @@ package com.travelproject.presentation.profile
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.travelproject.domain.model.Result
-import com.travelproject.domain.model.User
+import com.travelproject.domain.model.user.User
 import com.travelproject.domain.use_cases.user.GetProfileInfoUseCase
 import com.travelproject.domain.use_cases.user.LogoutUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -3,7 +3,7 @@ package com.travelproject.presentation.login
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.travelproject.domain.model.Result
-import com.travelproject.domain.model.UserLogin
+import com.travelproject.domain.model.user.UserLogin
 import com.travelproject.domain.use_cases.user.LoginUserUserCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow

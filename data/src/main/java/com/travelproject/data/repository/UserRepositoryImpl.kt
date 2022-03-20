@@ -6,9 +6,9 @@ import com.travelproject.data.util.Response
 import com.travelproject.data.util.SessionManager
 import com.travelproject.data.util.isNetworkConnected
 import com.travelproject.domain.model.Result
-import com.travelproject.domain.model.User
-import com.travelproject.domain.model.UserLogin
-import com.travelproject.domain.model.UserRegister
+import com.travelproject.domain.model.user.User
+import com.travelproject.domain.model.user.UserLogin
+import com.travelproject.domain.model.user.UserRegister
 import com.travelproject.domain.repository.UserRepository
 import javax.inject.Inject
 
